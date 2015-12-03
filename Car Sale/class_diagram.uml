@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_a8JTgGC2EeWu0tE_qwicDQ" name="NewModel">
+  <packageImport xmi:id="_TAqJwGFdEeWG_Yau26CGNw">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_1G4TEGFbEeWG_Yau26CGNw" name="Buyer">
+    <useCase href="use_case.uml#_lBXXYGCzEeWu0tE_qwicDQ"/>
+    <ownedAttribute xmi:id="_XjifEGFdEeWG_Yau26CGNw" name="minBudget" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_so5IMGFdEeWG_Yau26CGNw" name="maxBudget" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_zLZL4GFdEeWG_Yau26CGNw" name="name" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_9U1hEGFdEeWG_Yau26CGNw" name="id" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_FCCdUGFeEeWG_Yau26CGNw" name="setBudget">
+      <ownedParameter xmi:id="_IMmU0GFeEeWG_Yau26CGNw" name="minBudget" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      </ownedParameter>
+      <ownedParameter xmi:id="_WbElsGFeEeWG_Yau26CGNw" name="maxBudget">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_iEuJYGFeEeWG_Yau26CGNw" name="setName">
+      <ownedParameter xmi:id="_k2XxoGFeEeWG_Yau26CGNw" name="name">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_qaPC0GFeEeWG_Yau26CGNw" name="setId">
+      <ownedParameter xmi:id="_uzlosGFeEeWG_Yau26CGNw" name="id">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_0z_84GFnEeWG_Yau26CGNw" name="payFull"/>
+    <ownedOperation xmi:id="_34YT4GFnEeWG_Yau26CGNw" name="payCredit"/>
+    <ownedOperation xmi:id="_LPFp4GFoEeWG_Yau26CGNw" name="viewVehicles"/>
+    <ownedOperation xmi:id="_GyVVQGFpEeWG_Yau26CGNw" name="Lease"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_aWLT4GFfEeWG_Yau26CGNw" name="Dealer">
+    <ownedAttribute xmi:id="_eVUqAGFfEeWG_Yau26CGNw" name="name" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nF688GFfEeWG_Yau26CGNw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oGg3QGFfEeWG_Yau26CGNw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_wASP4GFfEeWG_Yau26CGNw" name="Inventory" visibility="private"/>
+    <ownedOperation xmi:id="_CDZy4GFnEeWG_Yau26CGNw" name="checkDiscount"/>
+    <ownedOperation xmi:id="_KfWrgGFnEeWG_Yau26CGNw" name="Sell"/>
+    <ownedOperation xmi:id="_eSCL0GFnEeWG_Yau26CGNw" name="checkCreditScore"/>
+    <ownedOperation xmi:id="_nuxzEGFnEeWG_Yau26CGNw" name="showInventory"/>
+    <ownedOperation xmi:id="_xITHMGFnEeWG_Yau26CGNw" name="showPreviousBuyers"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AZ-lsGFhEeWG_Yau26CGNw" name="Vehicle">
+    <ownedAttribute xmi:id="__vyR0GFjEeWG_Yau26CGNw" name="make" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Nz33oGFkEeWG_Yau26CGNw" name="model" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_WO-bsGFkEeWG_Yau26CGNw" name="year" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_bGfkQGFkEeWG_Yau26CGNw" name="color" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_g48EAGFkEeWG_Yau26CGNw" name="price" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_G1KHIGFmEeWG_Yau26CGNw" name="mileage" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_t4eckGFkEeWG_Yau26CGNw" name="setMake">
+      <ownedParameter xmi:id="_zkMCMGFkEeWG_Yau26CGNw" name="make">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_4isjkGFkEeWG_Yau26CGNw" name="getMake">
+      <ownedParameter xmi:id="_7j8HAGFkEeWG_Yau26CGNw" name="make" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_Asc48GFlEeWG_Yau26CGNw" name="setModel">
+      <ownedParameter xmi:id="_CAqS0GFlEeWG_Yau26CGNw" name="model">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_EqHBUGFlEeWG_Yau26CGNw" name="getModel">
+      <ownedParameter xmi:id="_GCd7YGFlEeWG_Yau26CGNw" name="model" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_LCaAIGFlEeWG_Yau26CGNw" name="setYear">
+      <ownedParameter xmi:id="_MVIMQGFlEeWG_Yau26CGNw" name="year">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_QWaQYGFlEeWG_Yau26CGNw" name="getYear">
+      <ownedParameter xmi:id="_RhXAkGFlEeWG_Yau26CGNw" name="year" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_to1BkGFlEeWG_Yau26CGNw" name="setColor">
+      <ownedParameter xmi:id="_u4ZzEGFlEeWG_Yau26CGNw" name="color">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_yTk5cGFlEeWG_Yau26CGNw" name="getColor">
+      <ownedParameter xmi:id="_zkwNcGFlEeWG_Yau26CGNw" name="color" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_769DYGFlEeWG_Yau26CGNw" name="setPrice">
+      <ownedParameter xmi:id="_9iK40GFlEeWG_Yau26CGNw" name="price">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_BbG5QGFmEeWG_Yau26CGNw" name="getPrice">
+      <ownedParameter xmi:id="_C-rk0GFmEeWG_Yau26CGNw" name="price" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_RzOXMGFmEeWG_Yau26CGNw" name="setMiles">
+      <ownedParameter xmi:id="_Tn3koGFmEeWG_Yau26CGNw" name="miles">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+    <ownedOperation xmi:id="_YGtHcGFmEeWG_Yau26CGNw" name="getMiles">
+      <ownedParameter xmi:id="_kyKGYGFmEeWG_Yau26CGNw" name="mileage" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7qoBAGFoEeWG_Yau26CGNw" memberEnd="_7qooEGFoEeWG_Yau26CGNw _7quusGFoEeWG_Yau26CGNw" navigableOwnedEnd="_7quusGFoEeWG_Yau26CGNw">
+    <ownedEnd xmi:id="_7qooEGFoEeWG_Yau26CGNw" name="dealers" type="_aWLT4GFfEeWG_Yau26CGNw" association="_7qoBAGFoEeWG_Yau26CGNw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7qtgkGFoEeWG_Yau26CGNw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7quHoGFoEeWG_Yau26CGNw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_7quusGFoEeWG_Yau26CGNw" name="buyers" type="_1G4TEGFbEeWG_Yau26CGNw" association="_7qoBAGFoEeWG_Yau26CGNw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7qxK8GFoEeWG_Yau26CGNw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7qxyAGFoEeWG_Yau26CGNw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Bpcv4GFpEeWG_Yau26CGNw" memberEnd="_BpdW8GFpEeWG_Yau26CGNw _BplSwGFpEeWG_Yau26CGNw" navigableOwnedEnd="_BplSwGFpEeWG_Yau26CGNw">
+    <name xsi:nil="true"/>
+    <ownedEnd xmi:id="_BpdW8GFpEeWG_Yau26CGNw" name="vehicles" type="_AZ-lsGFhEeWG_Yau26CGNw" aggregation="composite" association="_Bpcv4GFpEeWG_Yau26CGNw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BpjdkGFpEeWG_Yau26CGNw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BpkEoGFpEeWG_Yau26CGNw" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_BplSwGFpEeWG_Yau26CGNw" name="dealers" type="_aWLT4GFfEeWG_Yau26CGNw" association="_Bpcv4GFpEeWG_Yau26CGNw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BpqyUGFpEeWG_Yau26CGNw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BprZYGFpEeWG_Yau26CGNw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

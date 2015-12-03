@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;Inequality.reader().read&apos; in &apos;Inequality.reader()&apos; to field&#x0D;&#x0A;- Original project: &apos;Programming Contest&apos;&#x0D;&#x0A;- Original element: &apos;Inequality.reader().read&apos;&#x0D;&#x0A;- Field name: &apos;read&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;read&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;{Inequality.java" name="read" selection="187 46" stamp="1442076315304" static="false" version="1.0" visibility="2"/>
+</session>

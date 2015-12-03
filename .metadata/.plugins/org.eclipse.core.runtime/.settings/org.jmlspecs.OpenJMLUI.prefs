@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+openjml.defaultProver=cvc4
+openjml.prover.cvc4=C\:\\Users\\Fred\\Downloads\\cvc4-1.1-win32-opt.exe
+org.openjml.option.feasibility=all
+org.openjml.option.maxWarnings=2147483647
+org.openjml.option.solvers=cvc4,simplify,yices2,z3_4_3
+org.openjml.option.verboseness=0

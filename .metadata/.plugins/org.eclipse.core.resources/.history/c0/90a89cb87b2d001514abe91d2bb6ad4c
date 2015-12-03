@@ -1,0 +1,85 @@
+
+public class RegNode<K extends Comparable<K>,O> implements Node<K,O>{
+
+	/*@ public model JMLValueToObjectMap keyToValue;
+	 *@ public pure model JMLValueToObjectMap getMappings(Node node)
+	 *{	if(node == null)
+	 		return new JMLValueToObjectMap();
+	 	else return new JMLValueToObjectMap(new JMLInteger(node.key), node.obj)
+	 								.extendUnion(getMappings(node.leftNode))
+	 								.extendUnion(getMapping(node.rightNode));
+	 	 	}
+	 */
+	enum Placement {LEFT,RIGHT;};
+	
+	K key;
+	O obj;
+	Node<K,O> leftNode = new EmptyNode<K,O>();
+	Node<K,O> rightNode = new EmptyNode<K,O>();
+	
+	/*@ ensures key= key;
+	 *  ensures obj = obj; 
+	 */
+	public RegNode(K key, O obj)
+	{
+		this.key = key;
+		this.obj = obj;
+	}
+
+	public String toString()
+	{
+		return leftNode.toString(Node.Placement.RIGHT) 
+				+ "(" + key.toString()+ "," + obj.toString() + ")" 
+				+ rightNode.toString(Node.Placement.LEFT);
+	}
+	
+	@Override
+	public String toString( Node.Placement place) {
+		if(Node.Placement.LEFT == place)
+		{
+			return ", " + this.toString();
+		}
+		else
+			return this.toString() + ", ";
+		
+	}
+	
+	@Override
+		public Node<K, O> addTraverse(K newKey, O newObj) {
+		
+		if(newKey.compareTo(this.key) < 0)
+		{
+			leftNode = leftNode.addTraverse(newKey, newObj);
+		}
+		
+	
+		else if(newKey.compareTo(this.key) > 0)
+		{
+			rightNode = rightNode.addTraverse(newKey, newObj);
+		}
+		
+		else
+		{
+			obj = newObj;
+		}
+		
+		return this;
+		
+	}
+	
+	public O Search(K key)
+	{
+		if(key.compareTo(this.key) < 0)
+			return leftNode.Search(key);
+		
+		else if(key.compareTo(this.key) >0)
+			return rightNode.Search(key);
+		
+		else
+			return obj;
+	}
+
+	
+
+	
+}

@@ -1,0 +1,6 @@
+1436413874975	Rename type 'Node'
+1436413968171	Rename type 'topNode'
+1436414971000	Extract local variable 'comparable'
+1436414994000	Extract local variable 'newKey2'
+1436415007672	Extract local variable 'newKey3'
+1436415876807	Infer generic type arguments

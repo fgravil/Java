@@ -1,0 +1,174 @@
+package com.example.fredgravil.geoquiz;
+
+
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+
+public class QuizActivity extends ActionBarActivity {
+
+    /*@ public invariant TrueFalse != null;
+      @ public invariant 0 <= currentIndex &&  currentIndex <= TrueFalse.length;
+      @ public invariant ensures questionBank[currentIndex] != null;
+      @ public invariant questionTextView.getText().equals(TrueFalse[currentIndex].getQuestion());
+     */
+    /** Button to be clicked when the given question is true. */
+    private Button trueButton;
+
+    /** Button to be clicked when the given question is false. */
+    private Button falseButton;
+
+    /** Button to move on to the next question */
+    private Button nextButton;
+
+    /** View text questions */
+    private TextView questionTextView;
+
+    /** Counter for question bank. */
+    /*@ spec_public @*/ private int currentIndex;
+
+    /** Array of TrueFalse object.*/
+    /*@ spec_public @*/ private TrueFalse[]  questionBank = new TrueFalse[]{
+
+            new TrueFalse(R.string.question_oceans,true),
+            new TrueFalse(R.string.question_mideast,false),
+            new TrueFalse(R.string.question_africa,false),
+            new TrueFalse(R.string.question_americas,true),
+            new TrueFalse(R.string.question_asia,true)
+    };
+
+
+    /*@ ensures questionTextView.setText.equals(TrueFalse[currentIndex].getQuestion;
+    /** Displays the current question from the questionBank. */
+    private void /*@ extract @*/ updateQuestion(){
+
+        /** The current question in the question array. */
+        int question = questionBank[currentIndex].getQuestion();
+
+        /** Displays the question. */
+        questionTextView.setText(question);
+    }
+
+    /*@ requires clickedAnswer == question[currentIndex].getAnswer;
+      @ ensures Toast.makeText(this,"Correct!",Toast.LENGTH_SHORT).show();
+      @ also
+      @    requires clickedAnswer == question[currentIndex].getAnswer;
+      @    ensures Toast.makeText(this,"Incorrect!",Toast.LENGTH_SHORT).show();
+     */
+    /** Displays the answer to the user's response as correct or incorrect */
+    private void /*@ extract @*/ checkAnswer(boolean clickedAnswer) {
+
+        /** Correct answer for question. */
+        boolean answer = questionBank[currentIndex].getAnswer();
+
+        /** Determines whether the answer that is given is correct */
+        int result;
+
+        if (clickedAnswer == answer) {
+            result = R.string.correct_toast;
+        }
+
+        else {
+            result = R.string.incorrect_toast;
+        }
+
+        Toast.makeText(this, result, Toast.LENGTH_SHORT)
+                .show();
+    }
+
+    /*@ public model_program{
+      @    normal_behavior
+      @      ensures isClickable();
+      @ }
+   */
+    @Override
+    protected void /*@ extract @*/ onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_quiz);
+
+        /* Gets id of the TextView on XML */
+       questionTextView = (TextView)findViewById(R.id.question_text_view);
+
+        trueButton = (Button)findViewById(R.id.true_button);
+
+        
+        /** displays whether the statement is true or false **/
+        trueButton.setOnClickListener(new View.OnClickListener() {
+            /*@ */
+            @Override
+            public void onClick(View v) {
+                checkAnswer(true);
+
+            }
+        });
+
+        falseButton = (Button)findViewById(R.id.false_button);
+
+        /** displays whether the statement is true or false. **/
+        falseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                checkAnswer(false);
+            }
+        });
+
+        /** Moves on to the next question  when pressed.*/
+         nextButton = (Button)findViewById(R.id.next_button);
+
+        /** Displays next question when clicked. */
+        nextButton.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public /*@ extract @*/ void onClick(View v) {
+                /*@ refining normal_behavior
+                  @     assignable currentIndex;
+                  @     ensures currentIndex == \old(currentIndex) % questionBank.length;
+                */
+                 currentIndex = (currentIndex + 1) % questionBank.length;
+                 updateQuestion();
+             }
+         });
+
+        updateQuestion();
+
+    }
+
+
+    /*@ public model_program
+      @     parser = mContext.getResources().getLayout(menuRes);
+      @     AttributeSet attrs = Xml.asAttributeSet(parser);
+      @     parseMenu(parser, attrs, menu);
+      @     \result == true;
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    /*@ requires item != null;
+      @
+
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int /*@ spec_public @*/ id = item.getItemId();
+
+        // No inspection SimplifiableIfStatement
+        if (id == R.id.action_settings) {
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}

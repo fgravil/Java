@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Car Sale/model.uml&apos; to &apos;use_case.uml&apos;" description="Rename resource &apos;model.uml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="model.uml" name="use_case.uml" stamp="1442877261800" updateReferences="true"/>
+</session>

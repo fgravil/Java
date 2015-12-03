@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_AXseEGCuEeWu0tE_qwicDQ" name="Car Sale">
+  <packagedElement xmi:type="uml:Actor" xmi:id="_3yVYgGCyEeWu0tE_qwicDQ" name="Buyer"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_9g9IMGCyEeWu0tE_qwicDQ" name="Dealer"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_MjEcgGCzEeWu0tE_qwicDQ" name="Dealership" useCase="_lBXXYGCzEeWu0tE_qwicDQ _p1plwGCzEeWu0tE_qwicDQ _ttNtMGCzEeWu0tE_qwicDQ _w4KmQGCzEeWu0tE_qwicDQ _3EQ8IGCzEeWu0tE_qwicDQ _P2NLwGC0EeWu0tE_qwicDQ _RDFOkGC0EeWu0tE_qwicDQ _nqGewGC0EeWu0tE_qwicDQ _op3SoGC0EeWu0tE_qwicDQ _pg8EkGC0EeWu0tE_qwicDQ">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_lBXXYGCzEeWu0tE_qwicDQ" name="View Vehicle List">
+      <subject xmi:type="uml:Component" href="#_MjEcgGCzEeWu0tE_qwicDQ"/>
+      <subject xmi:type="uml:Class" href="class_diagram.uml#_1G4TEGFbEeWG_Yau26CGNw"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_p1plwGCzEeWu0tE_qwicDQ" name="View Vehicle Info" subject="_MjEcgGCzEeWu0tE_qwicDQ">
+      <include xmi:id="_pUoUoGC5EeWu0tE_qwicDQ" addition="_lBXXYGCzEeWu0tE_qwicDQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_ttNtMGCzEeWu0tE_qwicDQ" name="Buy Car" subject="_MjEcgGCzEeWu0tE_qwicDQ">
+      <extend xmi:id="_HSSC4GC0EeWu0tE_qwicDQ" extendedCase="_p1plwGCzEeWu0tE_qwicDQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_w4KmQGCzEeWu0tE_qwicDQ" name="Pay Full Price" subject="_MjEcgGCzEeWu0tE_qwicDQ">
+      <generalization xmi:id="_-L8JcGCzEeWu0tE_qwicDQ" general="_ttNtMGCzEeWu0tE_qwicDQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_3EQ8IGCzEeWu0tE_qwicDQ" name="Pay Credit" subject="_MjEcgGCzEeWu0tE_qwicDQ">
+      <generalization xmi:id="_AiTj4GC0EeWu0tE_qwicDQ" general="_ttNtMGCzEeWu0tE_qwicDQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_P2NLwGC0EeWu0tE_qwicDQ" name="Discount Check" subject="_MjEcgGCzEeWu0tE_qwicDQ">
+      <include xmi:id="_cxCDcGC0EeWu0tE_qwicDQ" addition="_w4KmQGCzEeWu0tE_qwicDQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_RDFOkGC0EeWu0tE_qwicDQ" name="Interest" subject="_MjEcgGCzEeWu0tE_qwicDQ">
+      <include xmi:id="_dntMwGC0EeWu0tE_qwicDQ" addition="_3EQ8IGCzEeWu0tE_qwicDQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_nqGewGC0EeWu0tE_qwicDQ" name="List Vehicles" subject="_MjEcgGCzEeWu0tE_qwicDQ"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_op3SoGC0EeWu0tE_qwicDQ" name="List Vehicle Info" subject="_MjEcgGCzEeWu0tE_qwicDQ">
+      <include xmi:id="_RYrDoGEuEeWG_Yau26CGNw" addition="_nqGewGC0EeWu0tE_qwicDQ"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_pg8EkGC0EeWu0tE_qwicDQ" name="List Previous Buyers" subject="_MjEcgGCzEeWu0tE_qwicDQ">
+      <include xmi:id="_iJzCcGC1EeWu0tE_qwicDQ" addition="_nqGewGC0EeWu0tE_qwicDQ"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_g8DSYGC0EeWu0tE_qwicDQ" memberEnd="_g8LOMGC0EeWu0tE_qwicDQ _g8LOMWC0EeWu0tE_qwicDQ">
+    <ownedEnd xmi:id="_g8LOMGC0EeWu0tE_qwicDQ" type="_3yVYgGCyEeWu0tE_qwicDQ" association="_g8DSYGC0EeWu0tE_qwicDQ"/>
+    <ownedEnd xmi:id="_g8LOMWC0EeWu0tE_qwicDQ" type="_lBXXYGCzEeWu0tE_qwicDQ" association="_g8DSYGC0EeWu0tE_qwicDQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jnwDoGC0EeWu0tE_qwicDQ" memberEnd="_jnwDoWC0EeWu0tE_qwicDQ _jnyf4GC0EeWu0tE_qwicDQ">
+    <ownedEnd xmi:id="_jnwDoWC0EeWu0tE_qwicDQ" type="_3yVYgGCyEeWu0tE_qwicDQ" association="_jnwDoGC0EeWu0tE_qwicDQ"/>
+    <ownedEnd xmi:id="_jnyf4GC0EeWu0tE_qwicDQ" type="_p1plwGCzEeWu0tE_qwicDQ" association="_jnwDoGC0EeWu0tE_qwicDQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_mEa6YGC0EeWu0tE_qwicDQ" memberEnd="_mEbhcGC0EeWu0tE_qwicDQ _mEdWoGC0EeWu0tE_qwicDQ">
+    <ownedEnd xmi:id="_mEbhcGC0EeWu0tE_qwicDQ" type="_3yVYgGCyEeWu0tE_qwicDQ" association="_mEa6YGC0EeWu0tE_qwicDQ"/>
+    <ownedEnd xmi:id="_mEdWoGC0EeWu0tE_qwicDQ" type="_ttNtMGCzEeWu0tE_qwicDQ" association="_mEa6YGC0EeWu0tE_qwicDQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-krkIGC0EeWu0tE_qwicDQ" memberEnd="_-krkIWC0EeWu0tE_qwicDQ _-ksLMGC0EeWu0tE_qwicDQ">
+    <ownedEnd xmi:id="_-krkIWC0EeWu0tE_qwicDQ" type="_nqGewGC0EeWu0tE_qwicDQ" association="_-krkIGC0EeWu0tE_qwicDQ"/>
+    <ownedEnd xmi:id="_-ksLMGC0EeWu0tE_qwicDQ" type="_9g9IMGCyEeWu0tE_qwicDQ" association="_-krkIGC0EeWu0tE_qwicDQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="__9MPMGC0EeWu0tE_qwicDQ" memberEnd="__9M2QGC0EeWu0tE_qwicDQ __9OrcGC0EeWu0tE_qwicDQ">
+    <ownedEnd xmi:id="__9M2QGC0EeWu0tE_qwicDQ" type="_op3SoGC0EeWu0tE_qwicDQ" association="__9MPMGC0EeWu0tE_qwicDQ"/>
+    <ownedEnd xmi:id="__9OrcGC0EeWu0tE_qwicDQ" type="_9g9IMGCyEeWu0tE_qwicDQ" association="__9MPMGC0EeWu0tE_qwicDQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_BLAtMGC1EeWu0tE_qwicDQ" memberEnd="_BLAtMWC1EeWu0tE_qwicDQ _BLB7UGC1EeWu0tE_qwicDQ">
+    <ownedEnd xmi:id="_BLAtMWC1EeWu0tE_qwicDQ" type="_pg8EkGC0EeWu0tE_qwicDQ" association="_BLAtMGC1EeWu0tE_qwicDQ"/>
+    <ownedEnd xmi:id="_BLB7UGC1EeWu0tE_qwicDQ" type="_9g9IMGCyEeWu0tE_qwicDQ" association="_BLAtMGC1EeWu0tE_qwicDQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_7jMBsGC3EeWu0tE_qwicDQ" name="Car Sale Subject" useCase="_-zswMGC3EeWu0tE_qwicDQ __7mzcGC3EeWu0tE_qwicDQ _BphGwGC4EeWu0tE_qwicDQ _CXaukGC4EeWu0tE_qwicDQ _RT7KIGC4EeWu0tE_qwicDQ">
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_-zswMGC3EeWu0tE_qwicDQ" name="View Vehicle" subject="_7jMBsGC3EeWu0tE_qwicDQ"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="__7mzcGC3EeWu0tE_qwicDQ" name="View Vehicle Info" subject="_7jMBsGC3EeWu0tE_qwicDQ"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_BphGwGC4EeWu0tE_qwicDQ" name="Buy Vehicle" subject="_7jMBsGC3EeWu0tE_qwicDQ"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_CXaukGC4EeWu0tE_qwicDQ" name="Purchase Full Price" subject="_7jMBsGC3EeWu0tE_qwicDQ"/>
+    <packagedElement xmi:type="uml:UseCase" xmi:id="_RT7KIGC4EeWu0tE_qwicDQ" name="Purchase Credit" subject="_7jMBsGC3EeWu0tE_qwicDQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_eLpqgGC4EeWu0tE_qwicDQ" name="Buyer"/>
+</uml:Model>
